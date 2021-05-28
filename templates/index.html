@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
   <style>
   body {
     font: 400 15px Lato, sans-serif;
@@ -31,8 +30,8 @@
     margin-bottom: 30px;
   }
   .jumbotron {
-    background-color: dodgerblue;
-    color: ghostwhite;
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/25/21/12/background-2442009_960_720.jpg");
+    color: white;
     padding: 70px 25px;
     text-transform: uppercase;
     font-family: Montserrat, sans-serif;
@@ -43,52 +42,44 @@
     padding: 60px 50px;
   }
   .bg-grey {
-    background-color: dodgerblue;
+
+     background-image: url("https://cdn.pixabay.com/photo/2017/06/25/21/12/background-2442009_960_720.jpg");
     color: ghostwhite;
+    font-size: 20px;
   }
-  .logo {
-    color: #0073e6;
-    font-size: 200px;
-  }
+ 
   label{
   	font-size: 20px;
-  	color: #0073e6;
+  	color: #00b386;
   }
   input{
   width:180px;
   	border: none;
-  	border-bottom: 2px solid #0073e6;
+  	border-bottom: 2px solid #00b386;
   }
   select{
     width:180px;
   	border: none;
-  	border-bottom: 2px solid #0073e6;
+  	border-bottom: 2px solid #00b386;
   }
   button{
-  	background-color: #0073e6;
+  	background-color: #00b386;
   	color: white;
   	border-radius: 5px;
   	border-color: white;
   }
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #0060e6;
-  }
+  
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<div class="jumbotron text-center">
-
-
-  <b>Loan Approval Prediction</b>
-
+<div class="jumbotron" >
+  <center><h1>LOAN APPROVAL PREDICTION</h1></center>  
 </div>
-
-<h2 align="center" style="color: #0073e6;">Enter the below details</h2><br>
-<div class="container" align="center">
-	<form action='/predict' method="post">
+<div>
+<h2 align="center" style="color: #00b386;">Enter the below details</h2><br>
+<div class="container" align="center">  
+	<form action='/predict' method="post" style="form">
 		<div class="row" >
 			<div class="col-sm-4">
       <label for="Gender">Gender</label>
@@ -131,7 +122,7 @@
             </select>
     </div>
     <div class="col-sm-4" >
-      <label ><b>Self_Employed</b></label>
+      <label ><b>Self Employed</b></label>
             <br>
           <select id="Self_Employed" name="Self_Employed">
               <option ></option>
@@ -140,27 +131,27 @@
             </select>
     </div>
     <div class="col-sm-4" >
-      <label><b>ApplicantIncome</b></label>
+      <label><b>Applicant Income</b></label>
             <br>
-          <input id="ApplicantIncome" name="ApplicantIncome" placeholder="" type="text">
+          <input id="ApplicantIncome" name="ApplicantIncome" placeholder="      In $" type="text">
     </div>
   </div>
 <br>
   <div class="row">
     <div class="col-sm-4">
-      <label><b>CoapplicantIncome</b></label>
+      <label><b>Coapplicant Income</b></label>
           <br>
-        <input placeholder="" name="CoapplicantIncome" id="CoapplicantIncome" type="text">
+        <input placeholder="      In $" name="CoapplicantIncome" id="CoapplicantIncome" type="text">
     </div>
     <div class="col-sm-4" >
-      <label ><b>LoanAmount</b></label>
+      <label ><b>Loan Amount</b></label>
             <br>
-         <input id="LoanAmount" name="LoanAmount" placeholder=""  type="text" >
+         <input id="LoanAmount" name="LoanAmount" placeholder="      In $"  type="text" >
     </div>
     <div class="col-sm-4" >
-      <label for="Loan_Amount_Term">Loan_Amount_Term</label>
+      <label for="Loan Amount Term">Loan Amount Term</label>
         <br>
-        <input id="Loan_Amount_Term" name="Loan_Amount_Term" placeholder=""  type="text" >
+        <input id="Loan_Amount_Term" name="Loan_Amount_Term" placeholder="      In days"  type="text" >
       <br>
 
 
@@ -170,7 +161,7 @@
         <br>
   <div class="row">
     <div class="col-sm-4">
-      <label><b>Credit_History</b></label>
+      <label><b>Credit History</b></label>
           <br>
         <select id="Credit_History" name="Credit_History">
             <option ></option>
@@ -182,7 +173,7 @@
 
   </div>
     <div class="col-sm-4" >
-      <label><b>Property_Area</b></label>
+      <label><b>Property Area</b></label>
           <br>
         <select id="Property_Area" name="Property_Area">
             <option ></option>
@@ -201,27 +192,23 @@
 </form>
 <br><br>
 <div class="row" align="center">
-	<label style=" font-size: 50px; color: #0073e6;">{{pred}}</label>
+	<label style=" font-size: 50px; color: #00b386;">{{pred}}</label>
 </div>
 </div>
-
+</div>
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+  <b><p class="text-center">CONTACT</p></b>
   <div class="row">
     <div class="col-sm-5">
-      <p>Contact Me.</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> harsha.18bcd7026@vitap.ac.in</p>
+      <p>Email</p>
+      <p> harsha.18bcd7026@vitap.ac.in</p>
 
     </div>
   </div>
-</div>
+</div>  
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-</footer>
+
 
 </body>
 </html>
